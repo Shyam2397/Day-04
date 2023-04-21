@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <title>Flags of Rest Countries</title>
+    <h1>HELLO</h1>
+    <h2>Displayed Countries Flags</h2>
+    <h3>This an example for XML HTTP request</h3>
+    <script>
+        
+        function Data(){
+            let data=JSON.parse(this.responseText);
+            for(let i=0;i<data.length;i++){
+                console.log(data[i].flags)
+            }
+        }
+        const req = new XMLHttpRequest();
+        req.addEventListener('load',Data);
+        req.open('Get','https://restcountries.com/v3.1/all');
+        req.send();
+
+    </script>
+</body>
+</html>
