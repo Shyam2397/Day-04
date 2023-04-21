@@ -22,3 +22,25 @@ Flag?console.log('Equal'):console.log('Not Equal')
 
 
 Result = Equal
+
+
+let obj1 = {name: "person 1", age:5};
+let obj2 = {age:5, name: "person 2"};
+
+let keys=Object.keys(obj1)
+
+let Flag=true
+for(let e of keys)
+{
+    if(obj1[e]!==obj2[e])
+    {
+        Flag=false;
+        break;
+        
+    }
+    
+}
+Flag?console.log('Equal'):console.log('Not Equal')
+
+
+Result = Not Equal
